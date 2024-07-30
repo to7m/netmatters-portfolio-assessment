@@ -1,0 +1,3 @@
+@mixin placeholder_breakpoint {
+    @media (min-width: 500px) { @content; }
+}

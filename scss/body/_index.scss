@@ -1,0 +1,10 @@
+@use "../text";
+@use "../colours";
+
+
+body {
+    background-color: colours.$white;
+
+    @include text.normal_text_sizes;
+    color: colours.$black;
+}
