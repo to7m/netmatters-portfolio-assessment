@@ -1,0 +1,103 @@
+@use "sass:map";
+
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?fv394j');
+    src:
+        url('fonts/icomoon.eot?fv394j#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?fv394j') format('truetype'),
+        url('fonts/icomoon.woff?fv394j') format('woff'),
+        url('fonts/icomoon.svg?fv394j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+$icon_chars_for_names: (
+    "arrow-right2": "\ea3c",
+    "arrow-shuffle": "\e901",
+    "bar-graph": "\e904",
+    "briefcase": "\f0b1",
+    "bullhorn": "\f0a1",
+    "chat": "\e908",
+    "chat_bubble": "\e907",
+    "clock-o": "\f017",
+    "cloud": "\f0c2",
+    "cloud-download": "\f0ed",
+    "cogs": "\f085",
+    "college": "\e905",
+    "dashboard": "\f0e4",
+    "display": "\e956",
+    "download3": "\e9c7",
+    "drive": "\e963",
+    "email": "\e906",
+    "embed2": "\ea80",
+    "envelope": "\f0e0",
+    "facebook": "\ea90",
+    "file-zip": "\e92b",
+    "flight": "\e906",
+    "folder-open": "\f07c",
+    "gears": "\f085",
+    "globe": "\f0ac",
+    "graduation": "\e905",
+    "group": "\f0c0",
+    "handshake-o": "\f2b5",
+    "hat": "\e905",
+    "headphones": "\e910",
+    "instagram": "\ea92",
+    "lab": "\e9aa",
+    "laptop": "\e957",
+    "laptop1": "\f109",
+    "line-chart": "\f201",
+    "linkedin2": "\eaca",
+    "lock": "\f023",
+    "menu": "\e9bd",
+    "mobile2": "\e959",
+    "money": "\f0d6",
+    "mouse": "\e903",
+    "paperplane": "\e906",
+    "pencil": "\f040",
+    "phone": "\e942",
+    "phone-square": "\f098",
+    "question-circle": "\f059",
+    "search": "\f002",
+    "security": "\e902",
+    "send": "\e906",
+    "shopping-cart": "\f07a",
+    "study": "\e905",
+    "suitcase": "\f0f2",
+    "tab": "\ea45",
+    "tachometer": "\f0e4",
+    "ticket": "\f145",
+    "twitter": "\e900",
+    "users": "\f0c0",
+    "volume-control-phone": "\f2a0",
+    "x": "\e900"
+);
+
+
+@function _get_icon_char($icon_name) {
+    @if not map-has-key($icon_chars_for_names, $icon_name) {
+        @error "$icon_name \"#{$icon_name}\" not recognised";
+    }
+
+    @return map.get($icon_chars_for_names, $icon_name);
+}
+
+
+@mixin _insert($position, $icon-name) {
+    &::#{$position} {
+        content: _get_icon_char($icon-name);
+        font-family: 'icomoon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        @content;
+    }
+}
+
+@mixin prepend($icon-name) { @include _insert("before", $icon_name) { @content; } }
+@mixin append($icon-name) { @include _insert("after", $icon_name) { @content; } }
