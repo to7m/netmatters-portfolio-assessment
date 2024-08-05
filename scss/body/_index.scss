@@ -2,18 +2,17 @@
 @use "../text";
 
 @use "aside";
+@use "all-except-aside";
 
 
 body {
     background-color: colours.$white;
 
     display: grid;
-    grid-template-rows: 100vh auto auto;
+    grid-template-rows: 100vh;
     grid-template-columns: 200px 1fr;
-    grid-template-areas:
-        "aside header"
-        "aside main"
-        "aside footer";
+    grid-template-areas: "aside all-except-aside";
+    justify-content: start;
 
     @include text.normal_text_sizes;
     color: colours.$black;
