@@ -2,6 +2,12 @@
 @use "text";
 
 
+aside {
+    grid-area: aside;
+
+    align-self: start;
+}
+
 .social-media-name { @include accessibility.non-bitmap-media-only; }
 .social-media-logo { @include accessibility.bitmap-media-only; }
 
@@ -9,4 +15,3 @@
 #instagram .social-media-logo { @include text.prepend_icon("instagram") }
 #x .social-media-logo { @include text.prepend_icon("x") }
 #linkedin .social-media-logo { @include text.prepend_icon("linkedin2") }
-

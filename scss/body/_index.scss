@@ -7,6 +7,14 @@
 body {
     background-color: colours.$white;
 
+    display: grid;
+    grid-template-rows: 100vh auto auto;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside main"
+        "aside footer";
+
     @include text.normal_text_sizes;
     color: colours.$black;
 }

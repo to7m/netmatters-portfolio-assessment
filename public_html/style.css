@@ -65,6 +65,11 @@ ol, ul {
   font-style: normal;
   font-display: block;
 }
+aside {
+  grid-area: aside;
+  align-self: start;
+}
+
 @media handheld, print, projection, screen, tv {
   .social-media-name {
     display: none;
@@ -115,6 +120,10 @@ ol, ul {
 
 body {
   background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-rows: 100vh auto auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: "aside header" "aside main" "aside footer";
   font-family: arial;
   font-size: 1rem;
   font-weight: normal;
