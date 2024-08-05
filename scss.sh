@@ -1,0 +1,1 @@
+sass --load-path=scss --watch scss:public_html

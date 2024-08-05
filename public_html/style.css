@@ -65,6 +65,12 @@ ol, ul {
   font-style: normal;
   font-display: block;
 }
+@media handheld, print, projection, screen, tv {
+  .social-media-name {
+    display: none;
+  }
+}
+
 body {
   background-color: rgb(255, 255, 255);
   font-family: arial;

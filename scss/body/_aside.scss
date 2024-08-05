@@ -1,0 +1,4 @@
+@use "accessibility";
+
+
+.social-media-name { @include accessibility.non-bitmap-media-only; }
