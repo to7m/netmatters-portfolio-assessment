@@ -99,5 +99,5 @@ $_icon_chars_for_names: (
     }
 }
 
-@mixin prepend($icon-name) { @include _insert("before", $icon_name) { @content; } }
-@mixin append($icon-name) { @include _insert("after", $icon_name) { @content; } }
+@mixin prepend_icon($icon-name) { @include _insert("before", $icon_name) { @content; } }
+@mixin append_icon($icon-name) { @include _insert("after", $icon_name) { @content; } }
