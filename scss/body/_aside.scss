@@ -37,7 +37,8 @@ aside > nav { padding: 30px 10px; }
 }
 
 #nav-links > li > a {
-    padding: 12px 0px;
+    margin: 12px 0px;
+    border-bottom: 2px solid colours.$transparent;
 
     &:hover {
         border-bottom: 2px solid colours.$blue;
