@@ -71,6 +71,48 @@ ol, ul {
   }
 }
 
+@media braille, embossed, speech, tty {
+  .social-media-logo {
+    display: none;
+  }
+}
+
+#facebook .social-media-logo::before {
+  content: "\ea90";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#instagram .social-media-logo::before {
+  content: "\ea92";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#x .social-media-logo::before {
+  content: "\e900";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#linkedin .social-media-logo::before {
+  content: "\eaca";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   font-family: arial;
