@@ -57,6 +57,14 @@ ol, ul {
   list-style-type: none;
 }
 
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?fv394j");
+  src: url("fonts/icomoon.eot?fv394j#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?fv394j") format("truetype"), url("fonts/icomoon.woff?fv394j") format("woff"), url("fonts/icomoon.svg?fv394j#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 body {
   background-color: rgb(255, 255, 255);
   font-family: arial;
