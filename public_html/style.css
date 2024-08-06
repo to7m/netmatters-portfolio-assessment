@@ -234,6 +234,28 @@ header p {
   object-fit: contain;
 }
 
+h3 {
+  font-family: arial;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.9rem;
+}
+
+#project-previews span {
+  font-family: arial;
+  font-size: 0.85rem;
+  font-weight: normal;
+  line-height: 1.35rem;
+}
+#project-previews span::after {
+  content: "\ea3c";
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   display: grid;

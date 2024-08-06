@@ -10,5 +10,7 @@ $_DEFAULT_FONTS: arial;
 
 
 @mixin h1_text_sizes { @include _text_sizes(3rem, $font-weight: bold); }
+@mixin h3_text_sizes { @include _text_sizes(1.4rem, $font-weight: bold); }
 @mixin header_p_text_sizes { @include _text_sizes(1.2rem); }
 @mixin normal_text_sizes { @include _text_sizes(1rem); }
+@mixin small_description_sizes { @include _text_sizes(0.85rem); }
