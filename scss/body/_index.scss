@@ -2,7 +2,7 @@
 @use "../text";
 
 @use "aside";
-@use "all-except-aside";
+@use "header";
 
 
 body {
@@ -16,4 +16,23 @@ body {
 
     @include text.normal_text_sizes;
     color: colours.$black;
+}
+
+aside {
+    grid-area: aside;
+    height: 100%;
+    width: 100%;
+    border-right: 3px solid colours.$blue;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#all-except-aside {
+    grid-area: all-except-aside;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }

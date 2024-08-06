@@ -3,16 +3,6 @@
 @use "colours";
 
 
-aside {
-    grid-area: aside;
-    height: 100%;
-    width: 100%;
-    border-right: 3px solid colours.$blue;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 #home-link {
     display: block;
     height: 160px;

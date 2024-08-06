@@ -65,16 +65,6 @@ ol, ul {
   font-style: normal;
   font-display: block;
 }
-aside {
-  grid-area: aside;
-  height: 100%;
-  width: 100%;
-  border-right: 3px solid rgb(82, 181, 204);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-
 #home-link {
   display: block;
   height: 160px;
@@ -165,15 +155,6 @@ aside > nav {
   text-transform: none;
 }
 
-#all-except-aside {
-  grid-area: all-except-aside;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   background-color: rgb(255, 255, 255);
   display: grid;
@@ -186,6 +167,25 @@ body {
   font-weight: normal;
   line-height: 1.5rem;
   color: rgb(0, 0, 0);
+}
+
+aside {
+  grid-area: aside;
+  height: 100%;
+  width: 100%;
+  border-right: 3px solid rgb(82, 181, 204);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#all-except-aside {
+  grid-area: all-except-aside;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
