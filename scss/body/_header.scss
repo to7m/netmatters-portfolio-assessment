@@ -14,8 +14,15 @@ header {
 }
 
 h1 {
+    width: 100%;
     @include text.h1_text_sizes;
+    @include layout.absolute_position_centred($top: 45%);
     text-shadow: 0 0 10px colours.$black;
+}
+
+header p {
+    @include layout.absolute_position_centred($bottom: 45%);
+    @include text.header_p_text_sizes;
 }
 
 #scroll-down {

@@ -166,17 +166,34 @@ header {
 }
 
 h1 {
+  width: 100%;
   font-family: arial;
   font-size: 3rem;
   font-weight: bold;
   line-height: 3.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
   text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+header p {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  bottom: 45%;
+  left: 50%;
+  font-family: arial;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.7rem;
 }
 
 #scroll-down {
   position: absolute;
-  transform: translate(0, 50%);
+  transform: translate(-50%, 50%);
   bottom: 35px;
+  left: 50%;
 }
 #scroll-down::after {
   content: "\e909";
