@@ -1,3 +1,14 @@
+@use "text";
+@use "colours";
+
+
 header {
-    
+    min-height: 100vh;
+    width: 100%;
+    @include colours.background_img_blend(colours.$darken, "stromatolites.png");
+    background-size: cover;
+    background-position: center;
+    color: colours.$white;
 }
+
+h1 { @include text.h1_text_sizes; }

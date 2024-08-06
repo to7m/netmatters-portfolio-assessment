@@ -9,4 +9,5 @@ $_DEFAULT_FONTS: arial;
 }
 
 
-@mixin normal_text_sizes { @include _text_sizes(1rem) }
+@mixin normal_text_sizes { @include _text_sizes(1rem); }
+@mixin h1_text_sizes { @include _text_sizes(3rem, $font-weight: bold); }

@@ -1,4 +1,10 @@
 $black: rgb(0%, 0%, 0%);
 $blue: rgb(32%, 71%, 80%);
+$darken: rgba(0%, 0%, 0%, 50%);
 $transparent: rgba(0%, 0%, 0%, 0%);
 $white: rgb(100%, 100%, 100%);
+
+
+@mixin background_img_blend($colour, $img_url) {
+    background-image: linear-gradient($colour, $colour), url($img_url)
+}
