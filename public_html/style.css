@@ -159,30 +159,31 @@ header {
   position: relative;
   min-height: 100vh;
   width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "div" "scroll-down";
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("stromatolites.png");
   background-size: cover;
   background-position: center;
   color: rgb(255, 255, 255);
 }
 
-h1 {
+header div {
+  grid-area: div;
   width: 100%;
+}
+
+h1 {
   font-family: arial;
   font-size: 3rem;
   font-weight: bold;
   line-height: 3.5rem;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 45%;
-  left: 50%;
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 header p {
-  position: absolute;
-  transform: translate(-50%, 50%);
-  bottom: 45%;
-  left: 50%;
+  margin-top: 20px;
   font-family: arial;
   font-size: 1.2rem;
   font-weight: normal;
@@ -190,10 +191,8 @@ header p {
 }
 
 #scroll-down {
-  position: absolute;
-  transform: translate(-50%, 50%);
-  bottom: 35px;
-  left: 50%;
+  grid-area: scroll-down;
+  margin: 15px 0;
 }
 #scroll-down::after {
   content: "\e909";
