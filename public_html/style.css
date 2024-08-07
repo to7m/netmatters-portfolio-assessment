@@ -192,12 +192,13 @@ header p {
   font-size: 1.2rem;
   font-weight: normal;
   line-height: 1.7rem;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 
 #scroll-down {
   grid-area: scroll-down;
   margin: 15px 0;
+  text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 #scroll-down::after {
   content: "\e909";

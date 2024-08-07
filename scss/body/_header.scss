@@ -34,12 +34,13 @@ h1 {
 header p {
     margin-top: 20px;
     @include text.header_p_text_sizes;
-    text-shadow: 0 0 10px colours.$black;
+    text-shadow: 0 0 4px colours.$black;
 }
 
 #scroll-down {
     grid-area: scroll-down;
     margin: 15px 0;
+    text-shadow: 0 0 4px colours.$black;
 
     @include text.append_icon("arrow-down") {
         display: block;
