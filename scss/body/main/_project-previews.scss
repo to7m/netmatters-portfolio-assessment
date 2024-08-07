@@ -36,5 +36,7 @@ h3 {
 #project-previews span {
     @include text.small_description_sizes;
 
-    @include text.append_icon("arrow-right");
+    @include text.append_icon("arrow-right") {
+        margin-left: 7px;
+    };
 }
