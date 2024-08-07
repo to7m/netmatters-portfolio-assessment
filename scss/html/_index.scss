@@ -34,6 +34,7 @@ aside {
     height: 100%;
     width: 100%;
     overflow-y: auto;
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
 }
