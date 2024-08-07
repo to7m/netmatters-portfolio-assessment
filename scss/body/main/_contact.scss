@@ -1,0 +1,15 @@
+#contact {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "text form";
+    margin: 50px auto 0 auto;
+}
+
+#contact-text {
+    grid-area: text;
+}
+
+#contact-form {
+    grid-area: form;
+}
