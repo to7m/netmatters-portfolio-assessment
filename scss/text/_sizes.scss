@@ -9,7 +9,8 @@ $_DEFAULT_FONTS: arial;
 }
 
 
-@mixin contact-links-text-sizes { @include _text_sizes(1.1rem, $font-weight: bold); }
+@mixin button-text-sizes { @include _text_sizes(1.1rem, $font-weight: bold); }
+@mixin contact-links-text-sizes { @include _text_sizes(1.2rem, $font-weight: bold); }
 @mixin h1_text_sizes { @include _text_sizes(3rem, $font-weight: bold); }
 @mixin h2_text_sizes { @include _text_sizes(1.8rem, $font-weight: bold); }
 @mixin h3_text_sizes { @include _text_sizes(1.4rem, $font-weight: bold); }

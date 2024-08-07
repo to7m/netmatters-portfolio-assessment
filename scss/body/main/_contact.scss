@@ -52,10 +52,21 @@ h2 {
 
 #contact-form input, #contact-form textarea {
     width: 100%;
-    background-color: colours.$light_grey;
+    border: none;
+    padding: 10px;
+    box-shadow: inset 0 0 2px colours.$light_grey_1;
+    background-color: colours.$light_grey_2;
+    border-radius: 2px;
 }
 
  #contact-form textarea {
     min-height: max(180px, 2rem);
     align-content: start;
  }
+
+#contact-form__submit-button {
+    padding: 15px 40px;
+    @include text.button_text_sizes;
+    border: 2px solid colours.$black;
+    border-radius: 5px;
+}
