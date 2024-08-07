@@ -34,6 +34,7 @@ h1 {
 header p {
     margin-top: 20px;
     @include text.header_p_text_sizes;
+    text-shadow: 0 0 10px colours.$black;
 }
 
 #scroll-down {
