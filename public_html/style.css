@@ -96,7 +96,7 @@ aside > nav {
 
 #nav-links > li > a {
   margin: 12px 0px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid transparent;
 }
 #nav-links > li > a:hover {
   border-bottom: 2px solid rgb(82, 181, 204);
