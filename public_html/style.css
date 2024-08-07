@@ -342,6 +342,14 @@ h2 {
   border-radius: 5px;
 }
 
+#scs-scheme h2 {
+  margin: 30px 0 10px 0;
+}
+
+#scs-scheme a {
+  color: rgb(0, 102, 153);
+}
+
 main {
   margin: 0 20px;
 }
