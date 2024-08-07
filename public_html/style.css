@@ -268,6 +268,13 @@ h3 {
   grid-area: text;
 }
 
+h2 {
+  font-family: arial;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2.1rem;
+}
+
 #contact-form {
   grid-area: form;
 }

@@ -1,3 +1,6 @@
+@use "text";
+
+
 #contact {
     display: grid;
     grid-template-rows: auto;
@@ -8,6 +11,10 @@
 
 #contact-text {
     grid-area: text;
+}
+
+h2 {
+    @include text.h2_text_sizes;
 }
 
 #contact-form {
