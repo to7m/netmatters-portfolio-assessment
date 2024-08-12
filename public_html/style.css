@@ -53,6 +53,11 @@ body {
   text-align: center;
 }
 
+hr {
+  width: 100%;
+  border: none;
+}
+
 ol, ul {
   list-style-type: none;
 }
@@ -70,36 +75,47 @@ button {
   font-style: normal;
   font-display: block;
 }
-#home-link {
-  display: block;
-  height: 160px;
-  width: 100%;
-  border-bottom: 3px solid rgb(82, 181, 204);
-}
-#home-link img {
-  height: 100%;
-  width: 100%;
-  padding: 30px;
-  object-fit: contain;
-}
-
 aside > nav {
-  padding: 30px 10px;
-}
-
-#nav-links {
-  display: flex;
-  flex-direction: column;
-}
-#nav-links > li {
   display: contents;
 }
 
-#nav-links > li > a {
+#nav-links {
+  width: 100%;
+  display: grid;
+}
+
+#home {
+  width: 100%;
+}
+#home img {
+  display: none;
+}
+@media (min-height: 500px) {
+  #home span {
+    display: none;
+  }
+  #home img {
+    display: block;
+  }
+}
+
+#home img {
+  height: 160px;
+  width: 100%;
+  padding: 30px;
+  border-bottom: 3px solid rgb(82, 181, 204);
+  object-fit: contain;
+}
+
+#nav-links > li {
+  flex: 1;
+}
+
+#home span, #nav-links > li > a {
   margin: 12px 0px;
   border-bottom: 2px solid transparent;
 }
-#nav-links > li > a:hover {
+#home span:hover, #nav-links > li > a:hover {
   border-bottom: 2px solid rgb(82, 181, 204);
 }
 
@@ -107,6 +123,9 @@ aside > nav {
   padding: 12px 0px;
   display: flex;
   color: rgb(82, 181, 204);
+}
+#nav-links__socials a {
+  margin: 2px 4px 6px 4px;
 }
 
 @media handheld, print, projection, screen, tv {
@@ -116,12 +135,15 @@ aside > nav {
 }
 
 .social-media-logo {
-  padding: 8px;
+  padding: 6px 4px 2px 4px;
 }
 @media braille, embossed, speech, tty {
   .social-media-logo {
     display: none;
   }
+}
+.social-media-logo:hover {
+  border-bottom: 2px solid rgb(82, 181, 204);
 }
 
 #facebook .social-media-logo::before {
@@ -343,12 +365,28 @@ h2 {
   border-radius: 5px;
 }
 
+#scs-scheme {
+  text-align: left;
+}
+
 #scs-scheme h2 {
-  margin: 30px 0 10px 0;
+  margin-top: 30px;
+}
+
+#scs-scheme p {
+  margin-top: 10px;
 }
 
 #scs-scheme a {
   color: rgb(0, 102, 153);
+}
+
+#scs-scheme ul {
+  padding-left: 20px;
+}
+
+#scs-scheme li {
+  list-style-type: disc;
 }
 
 main {
@@ -358,9 +396,9 @@ main {
 body {
   background-color: rgb(255, 255, 255);
   display: grid;
-  grid-template-rows: 100vh;
-  grid-template-columns: 200px 1fr;
-  grid-template-areas: "aside all-except-aside";
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "aside" "all-except-aside";
   justify-content: start;
   font-family: arial;
   font-size: 1rem;
@@ -368,15 +406,26 @@ body {
   line-height: 1.5rem;
   color: rgb(0, 0, 0);
 }
+@media (min-width: 640px) {
+  body {
+    grid-template-rows: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "aside all-except-aside";
+  }
+}
 
 aside {
   grid-area: aside;
-  height: 100%;
   width: 100%;
-  border-right: 3px solid rgb(82, 181, 204);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 640px) {
+  aside {
+    height: 100%;
+    border-right: 3px solid rgb(82, 181, 204);
+    overflow-y: auto;
+  }
 }
 
 #all-except-aside {

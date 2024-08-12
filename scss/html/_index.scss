@@ -1,5 +1,6 @@
-@use "../colours";
-@use "../text";
+@use "layout";
+@use "text";
+@use "colours";
 
 @use "aside";
 @use "header";
@@ -10,9 +11,17 @@ body {
     background-color: colours.$white;
 
     display: grid;
-    grid-template-rows: 100vh;
-    grid-template-columns: 200px 1fr;
-    grid-template-areas: "aside all-except-aside";
+
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "aside"
+        "all-except-aside";
+    @include layout.split_panes_breakpoint {
+        grid-template-rows: 100vh;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: "aside all-except-aside";
+    }
     justify-content: start;
 
     @include text.normal_text_sizes;
@@ -21,12 +30,15 @@ body {
 
 aside {
     grid-area: aside;
-    height: 100%;
     width: 100%;
-    border-right: 3px solid colours.$blue;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
+
+    @include layout.split_panes_breakpoint {
+        height: 100%;
+        border-right: 3px solid colours.$blue;
+        overflow-y: auto;
+    }
 }
 
 #all-except-aside {

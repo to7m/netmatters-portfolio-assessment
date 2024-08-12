@@ -1,32 +1,41 @@
 @use "accessibility";
+@use "layout";
 @use "text";
 @use "colours";
 
 
-#home-link {
-    display: block;
-    height: 160px;
-    width: 100%;
-    border-bottom: 3px solid colours.$blue;
+aside > nav {
+    display: contents;
+}
 
-    img {
-        height: 100%;
-        width: 100%;
-        padding: 30px;
-        object-fit: contain;
+#nav-links {
+    width: 100%;
+    display: grid;
+
+    @include layout.grid_from_template_areas(3, "hello there");
+}
+
+#home {
+    width: 100%;
+
+    img { display: none; }
+
+    @include layout.short_breakpoint {
+        span { display: none; }
+        img { display: block; }
     }
 }
 
-aside > nav { padding: 30px 10px; }
-
-#nav-links {
-    display: flex;
-    flex-direction: column;
-
-    > li { display: contents; }
+#home img {
+    height: 160px;
+    width: 100%;
+    padding: 30px;
+    border-bottom: 3px solid colours.$blue;
+    object-fit: contain;
 }
 
-#nav-links > li > a {
+
+#home span, #nav-links > li > a {
     margin: 12px 0px;
     border-bottom: 2px solid transparent;
 
@@ -39,13 +48,19 @@ aside > nav { padding: 30px 10px; }
     padding: 12px 0px;
     display: flex;
     color: colours.$blue;
+
+    a { margin: 2px 4px 6px 4px; }
 }
 
 .social-media-name { @include accessibility.non-bitmap-media-only; }
 .social-media-logo {
     @include accessibility.bitmap-media-only;
 
-    padding: 8px;
+    padding: 6px 4px 2px 4px;
+
+    &:hover {
+        border-bottom: 2px solid colours.$blue;
+    }
 }
 
 #facebook .social-media-logo { @include text.prepend_icon("facebook") }

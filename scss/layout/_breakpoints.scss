@@ -1,3 +1,8 @@
-@mixin placeholder_breakpoint {
-    @media (min-width: 500px) { @content; }
+@mixin short_breakpoint {
+    @media (min-height: 500px) { @content; }
+}
+
+
+@mixin split_panes_breakpoint {
+    @media (min-width: 640px) { @content; }
 }
