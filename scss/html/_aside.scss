@@ -5,43 +5,75 @@
 
 
 aside > nav {
-    display: contents;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #nav-links {
-    width: 100%;
-    display: grid;
-
-    @include layout.grid_from_template_areas(3, "hello there");
+    display: flex;
+    flex-direction: column;
 }
 
-#home {
-    width: 100%;
-
-    img { display: none; }
-
-    @include layout.short_breakpoint {
-        span { display: none; }
-        img { display: block; }
-    }
-}
-
-#home img {
+#logo-home-link {
+    display: none;
     height: 160px;
     width: 100%;
     padding: 30px;
     border-bottom: 3px solid colours.$blue;
-    object-fit: contain;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+#nav-links > li {
+    display: block;
 }
 
 
-#home span, #nav-links > li > a {
-    margin: 12px 0px;
-    border-bottom: 2px solid transparent;
+@include layout.short_breakpoint {
+    #logo-home-link { display: block; }
+    #list-home-link { display: none; }
+}
 
-    &:hover {
-        border-bottom: 2px solid colours.$blue;
+@include layout.logo_left_breakpoint {
+    #logo-home-link { display: block; }
+    #list-home-link { display: none; }
+
+    aside > nav {
+        flex-direction: row;
     }
+
+    #logo-home-link {
+        width: min(45%, 200px);
+        border-bottom: none;
+        border-right: 3px solid colours.$blue;
+    }
+
+    #nav-links {
+        flex: 1;
+    }
+}
+
+@include layout.split_panes_breakpoint {
+    aside > nav {
+        flex-direction: column;
+    }
+
+    #logo-home-link {
+        border-right: none
+    }
+}
+
+
+#home span, #nav-links > li {
+    padding: 12px 0px;
+
+    > a { border-bottom: 2px solid transparent; }
+    > a:hover { border-bottom: 2px solid colours.$blue; }
 }
 
 #nav-links__socials {

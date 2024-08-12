@@ -1,7 +1,19 @@
 @mixin short_breakpoint {
-    @media (min-height: 500px) { @content; }
+    @media (min-height: 400px) { @content; }
 }
 
+
+@mixin logo_left_breakpoint {
+    @media (min-width: 280px) { @content; }
+}
+
+@mixin nav_links_mixed_breakpoint {
+    @media (min-width: 400px) { @content; }
+}
+
+@mixin nav_links_horizontal_breakpoint {
+    @media (min-width: 500px) { @content; }
+}
 
 @mixin split_panes_breakpoint {
     @media (min-width: 640px) { @content; }

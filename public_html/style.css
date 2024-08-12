@@ -76,46 +76,75 @@ button {
   font-display: block;
 }
 aside > nav {
-  display: contents;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav-links {
-  width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
-#home {
-  width: 100%;
-}
-#home img {
+#logo-home-link {
   display: none;
-}
-@media (min-height: 500px) {
-  #home span {
-    display: none;
-  }
-  #home img {
-    display: block;
-  }
-}
-
-#home img {
   height: 160px;
   width: 100%;
   padding: 30px;
   border-bottom: 3px solid rgb(82, 181, 204);
+}
+#logo-home-link img {
+  height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
 #nav-links > li {
-  flex: 1;
+  display: block;
 }
 
-#home span, #nav-links > li > a {
-  margin: 12px 0px;
+@media (min-height: 400px) {
+  #logo-home-link {
+    display: block;
+  }
+  #list-home-link {
+    display: none;
+  }
+}
+@media (min-width: 280px) {
+  #logo-home-link {
+    display: block;
+  }
+  #list-home-link {
+    display: none;
+  }
+  aside > nav {
+    flex-direction: row;
+  }
+  #logo-home-link {
+    width: min(45%, 200px);
+    border-bottom: none;
+    border-right: 3px solid rgb(82, 181, 204);
+  }
+  #nav-links {
+    flex: 1;
+  }
+}
+@media (min-width: 640px) {
+  aside > nav {
+    flex-direction: column;
+  }
+  #logo-home-link {
+    border-right: none;
+  }
+}
+#home span, #nav-links > li {
+  padding: 12px 0px;
+}
+#home span > a, #nav-links > li > a {
   border-bottom: 2px solid transparent;
 }
-#home span:hover, #nav-links > li > a:hover {
+#home span > a:hover, #nav-links > li > a:hover {
   border-bottom: 2px solid rgb(82, 181, 204);
 }
 
